@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JAVASCRIPT</title>
+        <script defer src="./script.js"></script>
+        
+
+        <style>
+           * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            div.game{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                height: 500px;
+            }
+            div.options{
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                margin: 50px;
+            }
+            div.options .option{
+                width: 100px;
+                background-color: cyan;
+                margin: 0px 30px;
+                padding: 20px;
+                border: 5px solid black;
+                border-radius: 500px;
+                box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                transition: 0.5s ease-in-out;
+            }
+
+            div.options .option#scissor{ 
+                transform: rotate(-90deg) rotateY(180deg)
+            }
+
+            div.options .option:hover{
+                cursor: pointer;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+                
+            }
+                
+             div.options .option img{
+                width: 100%;
+            }
+
+            div.scoreboard{
+                width: 130px;
+                height: 100px;
+                background-color: rebeccapurple;
+                opacity: 0.8;
+                border-radius: 20px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+               
+            }
+
+            #player,
+            #computer{
+                position: relative;
+            }
+
+            #player div{
+                position: absolute;
+                left: -5px;
+                height:20px;
+                width: 60px;
+                background-color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                left: -80px;
+                top: 25px;
+                padding: 5px;
+            }
+
+            #computer div{
+                position: absolute;
+                right: -10px;
+                height:20px;
+                width: 70px;
+                background-color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                right: -90px;
+                top: 25px;
+                padding: 5px;
+            }
+
+            div.partition {
+                width: 3px;
+                height: 100%;
+                background-color: #fff;
+            }
+
+            .correct {
+                border: 5px solid greenyellow !important;
+            }
+
+            .incorrect {
+                border: 5px solid crimson !important;
+            }
+            
+            
+        </style>
+    </head>
+    
+ 
+    <body class="">
+
+       <div class="game">
+        <div class="scoreboard">
+            <div id="player">
+            <h1 class="text-2xl text-white">
+                0
+            </h1>
+            <div class="text-lg">Player</div>
+        </div>
+        <div class="partition"></div>
+            <div id="computer">
+               <h1 class="text-2xl text-white">
+                0
+            </h1>
+            <div class="text-lg">Computer</div>
+        </div> 
+        </div>
+
+
+        <div id="message-box" class="my-5" >  
+            <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Rock beats scissor you win</h1>
+        </div>
+
+        <div class="options">
+            <div id="rock" class="option">
+            <img src="https://www.svgrepo.com/show/323925/rock.svg"alt="rock option">
+        </div>
+
+        <div id="paper" class="option">
+            <img src="https://www.svgrepo.com/show/479042/palm.svg"alt="paper option">
+        </div>
+        <div id="scissor" class="option">
+            <img src="https://www.svgrepo.com/show/455978/peace.svg"alt="scissor option">
+        </div>
+       </div>
+
+        </div>
+
+    
+
+
+
